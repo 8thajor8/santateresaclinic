@@ -1,0 +1,79 @@
+body {
+  font-family: "Cabin";
+  background-color: black;
+}
+
+.navbar {
+  background-color: rgba(188, 188, 189, 0.8);
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar li a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.call__button {
+  background-color: #2E3192;
+  border-radius: 15px;
+  color: white;
+  font-weight: 100;
+}
+.call__button i {
+  margin-right: 10px;
+}
+.call__button:hover {
+  background-color: #1C75BC;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.banner {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url(/assets/santateresaclinic.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+.banner .texto__banner {
+  color: white;
+  position: relative;
+  z-index: 2;
+  max-width: 37%;
+}
+.banner h1 {
+  font-family: "Archivo Black";
+}
+.banner .parrafo__banner {
+  font-size: 1.6rem;
+  max-width: 80%;
+}
+.banner .contactus__button {
+  background-color: #2E3192;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.banner .contactus__button i {
+  margin-right: 10px;
+}
+.banner .contactus__button:hover {
+  background-color: #1C75BC;
+}
+
+/*# sourceMappingURL=main.css.map */
