@@ -18,7 +18,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="https://lifeguardcostarica.com/home">
                 <img src="./assets/logo.svg" alt="Logo Lifeguard" height="50px">
@@ -32,23 +32,26 @@
                     
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#banner">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Location</a>
+                        <a class="nav-link" href="#location">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Clinics</a>
+                        <a class="nav-link " href="#contactus">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://lifeguardcostarica.com/our-clinics">Clinics</a>
                     </li>
                 </ul>
                     
             </div>
 
             <div>
-                <a class="btn call__button px-3"><i class="fa-solid fa-phone-volume"></i>Call Now</a>
+                <a class="btn call__button px-3" href="tel:+50685129111"><i class="fa-solid fa-phone-volume"></i>Call Now</a>
             </div>
 
         </div>
@@ -57,7 +60,7 @@
     <!-- Banner -->
 
 
-    <div class="banner">
+    <div id="banner" class="banner">
         <div class="overlay"></div>
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
@@ -65,14 +68,116 @@
                     <h1 class="mb-5">FAST & RELIABLE URGENT CARE SERVICES</h1>  
                     <div class="d-flex justify-content-center"><p class="parrafo__banner">Get quality medical care when you need it most</p></div>
                     <div>
-                        <a class="btn contactus__button mt-4 px-5 py-3">Contact us!</a>
+                        <a class="btn contactus__button mt-4 px-5 py-3" href="#contactus">Contact us!</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Location Section -->
+
+    <div id="location" class="location__container">
+        <div class="location__info ">
+            <div>
+                <h2>Santa Teresa, Puntarenas</h2>
+                <p>East side of the Santa Teresa's Church.</p>
+                <p>Regular schedule 8 am to 11 pm everyday!</p>
+                <p>Available 24/7 On call (5 minute response).</p>
+                <p>Tel. <a href="tel:+50685129111"> +506 8512 9111</a></p>
+            </div>
+            <div class="text-center">
+                <a class="btn whatsapp__button mt-4 px-4 py-2" href="https://wa.me/50685129111" target="_blank">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/whatsapplogo.png" alt="WhatsApp Logo" class="whatsapp__logo">
+                        <span>WhatsApp</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="location__map">
+            <!-- Google Map embed code goes here -->
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7866.998502262171!2d-85.17201974987985!3d9.638312336042578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f6ef143fbc881%3A0xb72d603d4bd1bd3b!2sLifeguard%20Costa%20Rica%20Santa%20Teresa!5e0!3m2!1sen!2scr!4v1707244421411!5m2!1sen!2scr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services__container">
+        <h2 class="services__title">How can we help?</h2>
+        
+        <div class="card__container">
+            <div class="card align-items-center">
+                <img src="./assets/ambulance.webp" alt="ambulance dispatch" class="card__image">
+                <h3 class="card__title">Emergency Ambulance Dispatch</h3>
+                <p class="card__text">Available 24/7 everyday in Santa Teresa Beach, Montezuma Beach, Playa Carmen Beach, Nosara and Monteverde. We can take care of any emergency situation on the road.</p>
+            </div>
+        
+            <div class="card align-items-center">
+                <img src="./assets/emergency.webp" alt="emergency consultation" class="card__image">
+                <h3 class="card__title">Emergency Medical Consultation</h3>
+                <p class="card__text">Available 24/7 everyday in Santa Teresa Beach, Montezuma Beach, Playa Carmen Beach, Nosara and Monteverde.</p>
+            </div>
+        
+            <div class="card align-items-center">
+                <img src="./assets/consultation.webp" alt="medical consultation" class="card__image">
+                <h3 class="card__title">Medical Consultation</h3>
+                <p class="card__text">Non-Emergency Medical consultations and other services for every day need. From 8 am to 5 pm everyday.</p>
+            </div>
+        
+            <div class="card align-items-center">
+                <img src="./assets/stitches.webp" alt="stitching and wound cleaning" class="card__image">
+                <h3 class="card__title">Stitches, wound cleaning and care</h3>
+                <p class="card__text">Service available 24/7 for emergency and Non-Emergency cases</p>
+            </div>
+    </section>
     
+    <!-- Contact Us Section -->
+    <section id="contactus" class="contact__container">
+        <div class="d-flex align-items-center justify-content-center contact__tittle__container">
+            <div class="contact__divider"></div>
+            <h2 class="contact__title">Contact Us</h2>
+            <div class="contact__divider"></div>
+        </div>
+        <div class="contact__content">
+            <h3>Doctor 24/7 Lifeguard Costa Rica</h3>
+            <div class="text-center">
+                <a class="btn whatsapp__button my-4 px-4 py-2" href="https://wa.me/50685129111" target="_blank">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/whatsapplogo.png" alt="WhatsApp Logo" class="whatsapp__logo">
+                        <span>WhatsApp</span>
+                    </div>
+                </a>
+            </div>
+            <h3>Santa Teresa Urgent Care</h3>    
+            <p class="my-5">Lifeguard Costa Rica Santa Teresa, Puntarenas Province, Cobano, Costa Rica</p>
+            <div>
+                <a class="btn call__button px-3" href="tel:+50685129111"><i class="fa-solid fa-phone-volume"></i>Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer__container">
+        <a href="https://lifeguardcostarica.com/home"><img src="./assets/logowhite.svg" alt="Logo" class="footer__logo mt-3"></a>
+        <p class="footer__disclaimer mt-4 mb-2">Copyright © 2023 Lifeguard Costa Rica S.A. - All Rights Reserved.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
+
+    <script>
+
+        let prevScrollpos = window.pageYOffset;
+
+        window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").classList.remove("hidden");
+        } else {
+            document.getElementById("navbar").classList.add("hidden");
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    </script>   
 </html>

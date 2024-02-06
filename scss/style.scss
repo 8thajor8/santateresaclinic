@@ -1,6 +1,7 @@
 $primary-blue: #2E3192;
+$head-text: 'Archivo Black';
 $light-gray:rgb(188, 188, 189);
-$primary-aqua: #46C2CB;
+
 $secondary-violet: #6D67E4;
 $secondary-yellow: #F2F7A1;
 
@@ -12,6 +13,7 @@ body{
 
 .navbar{
     background-color: rgb(188, 188, 189,0.8);
+    transition: top 0.5s; /* Add smooth transition */
     
     li{
         margin: 0 15px;
@@ -20,6 +22,10 @@ body{
             font-weight: bold;
         } 
     }
+}
+
+.navbar.hidden {
+    top: -100px; /* Move navbar off-screen */
 }
 
 .call__button{
@@ -64,7 +70,7 @@ body{
         max-width: 37%;
     }
     h1{
-        font-family: 'Archivo Black';
+        font-family: $head-text;
     }
     .parrafo__banner{
         font-size: 1.6rem;
@@ -88,3 +94,162 @@ body{
 
 }
 
+.location__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.location__info {
+    width: 30%;
+    padding: 50px;
+    background-color: $primary-blue;
+    color: white;
+    h2 {
+        font-size: 1.5em;
+        font-family: $head-text;
+        margin-bottom: 30px;
+
+    }
+    p {
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+        a{
+            color: white;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+.whatsapp__button{
+    background-color: $light-gray;
+    border-radius: 30px;
+    color: white;
+    
+    font-family: $head-text;
+    font-weight: 800;
+    font-size: 1.2rem;
+    &:hover{
+        background-color: #1C75BC;
+    }
+    .whatsapp__logo{
+        margin-right: 8px;
+        width: 30px;
+    }
+}
+
+.location__map {
+    width: 70%;
+    
+}
+
+.services__container {
+    background-color: #fff; /* Change to desired background color */
+    padding: 50px 0;
+    text-align: center;
+}
+  
+.services__title {
+    font-size: 2.3rem;
+    font-family: $head-text;
+    color: $primary-blue;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+  
+.card__container {
+    max-width: 620px; /* Adjust as needed */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Gap between cards */
+    justify-items: center; /* Center items horizontally */
+  }
+  
+  .card {
+    width: 100%; /* Occupy full width of the column */
+    padding: 28px;
+    
+    border: 0;
+    background-color: rgb(188, 188, 189,0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding box-shadow to the transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+}
+
+.card__image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    object-position: center; /* Center the image within its container */
+    margin-bottom: 20px; /* Add margin to separate image from text */
+}
+
+.card__title {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.card__text {
+    font-size: 16px;
+}
+
+.contact__container {
+    background-color: #D9D9D9; /* Light gray background color */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact__tittle__container{
+    color: $primary-blue;
+    font-family: $head-text;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+  
+.contact__divider {
+    width: 30%;
+    height: 4px;
+    background-color: $primary-blue; /* Black color for the divider */
+    display: inline-block;
+}
+
+.contact__title {
+    display: inline-block;
+    
+    margin: 0 20px; /* Adjust margin to match the divider width */
+}
+
+.contact__content {
+    margin-top: 20px;
+    h3 {
+        font-size: 1.6rem;
+        
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.footer__container {
+    background-color: $primary-blue; /* Blue background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer__logo {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer__disclaimer {
+    font-size: 1.1rem;
+    
+}
