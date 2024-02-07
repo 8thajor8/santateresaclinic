@@ -6,6 +6,19 @@ body {
 .navbar {
   background-color: rgba(188, 188, 189, 0.8);
   transition: top 0.5s; /* Add smooth transition */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand {
+  max-width: 30%;
+  margin-right: 0px;
+}
+.navbar .navbar-brand img {
+  width: 100%;
+}
+.navbar .nav-item {
+  text-align: center;
 }
 .navbar li {
   margin: 0 15px;
@@ -13,6 +26,12 @@ body {
 .navbar li a {
   text-transform: uppercase;
   font-weight: bold;
+}
+.navbar .collapse.navbar-collapse {
+  justify-content: center;
+}
+.navbar .call__button {
+  margin-left: auto;
 }
 
 .navbar.hidden {
@@ -32,6 +51,15 @@ body {
   background-color: #1C75BC;
 }
 
+@media (min-width: 992px) {
+  .navbar .collapse.navbar-collapse {
+    flex-grow: 1;
+    order: 2; /* Move the menu below */
+  }
+  .navbar .call__button__container {
+    order: 3; /* Move the call button to the right */
+  }
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -81,6 +109,19 @@ body {
   background-color: #1C75BC;
 }
 
+@media (max-width: 992px) {
+  .banner .texto__banner {
+    max-width: 95%;
+  }
+  .banner .texto__banner h1 {
+    font-size: 2rem;
+  }
+  .banner .texto__banner .parrafo__banner {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    max-width: 100%;
+  }
+}
 .location__container {
   display: flex;
   flex-direction: row;
@@ -126,6 +167,22 @@ body {
   width: 70%;
 }
 
+@media (max-width: 992px) {
+  .location__container {
+    flex-direction: column;
+  }
+  .location__container .location__map {
+    width: 100%;
+    height: 400px;
+    order: 1;
+  }
+  .location__container .location__info {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    padding: 20px;
+  }
+}
 .services__container {
   background-color: #fff; /* Change to desired background color */
   padding: 50px 0;
@@ -181,6 +238,17 @@ body {
   font-size: 16px;
 }
 
+@media (max-width: 992px) {
+  .services__container .services__title {
+    font-size: 1.7rem;
+  }
+  .services__container .card__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services__container .card__container .card {
+    width: 80%;
+  }
+}
 .contact__container {
   background-color: #D9D9D9; /* Light gray background color */
   padding: 50px 0;
@@ -231,6 +299,33 @@ body {
 
 .footer__disclaimer {
   font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .contact__container {
+    padding: 30px;
+  }
+  .contact__container .contact__divider {
+    display: none;
+  }
+  .contact__container .contact__title {
+    font-size: 1.8rem;
+  }
+  .contact__container h3 {
+    font-size: 1.2rem;
+  }
+  .contact__container p {
+    font-size: 1rem;
+  }
+  .footer__container {
+    padding: 15px;
+  }
+  .footer__container .footer__logo {
+    width: 150px;
+  }
+  .footer__container p {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
