@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/55d940ec4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Santa Teresa Urgent Care</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -63,14 +65,21 @@
 
 
     <div id="banner" class="banner">
-        <div class="overlay"></div>
+        <div class='ripple-background'>
+            <div class='circle xxlarge shade1'></div>
+            <div class='circle xlarge shade2'></div>
+            <div class='circle large shade3'></div>
+            <div class='circle mediun shade4'></div>
+            <div class='circle small shade5'></div>
+            <div class='circle right__circle'></div>
+        </div>
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="d-flex flex-column  text-center texto__banner">
-                    <h1 class="mb-5">FAST & RELIABLE URGENT CARE SERVICES</h1>  
-                    <div class="d-flex justify-content-center"><p class="parrafo__banner">Get quality medical care when you need it most</p></div>
+                    <h1 class="mb-5 animate__animated animate__fadeInLeft">FAST & RELIABLE URGENT CARE SERVICES</h1>  
+                    <div class="d-flex justify-content-center animate__animated animate__fadeInRight"><p class="parrafo__banner">Get quality medical care when you need it most</p></div>
                     <div>
-                        <a class="btn contactus__button mt-4 px-5 py-3" href="#contactus">Contact us!</a>
+                        <a class="btn contactus__button mt-4 px-5 py-3 animate__animated animate__fadeInUp" href="#contactus">Contact us!</a>
                     </div>
                 </div>
             </div>
@@ -80,8 +89,8 @@
     <!-- Location Section -->
 
     <div id="location" class="location__container">
-        <div class="location__info ">
-            <div>
+        <div class="location__info " >
+            <div data-aos="zoom-in">
                 <h2>Santa Teresa, Puntarenas</h2>
                 <p>East side of the Santa Teresa's Church.</p>
                 <p>Regular schedule 8 am to 11 pm everyday!</p>
@@ -109,25 +118,25 @@
         <h2 class="services__title">How can we help?</h2>
         
         <div class="card__container">
-            <div class="card align-items-center">
+            <div class="card align-items-center" data-aos="fade-up">
                 <img src="./assets/ambulance.webp" alt="ambulance dispatch" class="card__image">
                 <h3 class="card__title">Emergency Ambulance Dispatch</h3>
                 <p class="card__text">Available 24/7 everyday in Santa Teresa Beach, Montezuma Beach, Playa Carmen Beach, Nosara and Monteverde. We can take care of any emergency situation on the road.</p>
             </div>
         
-            <div class="card align-items-center">
+            <div class="card align-items-center" data-aos="fade-up" data-aos-delay="300">
                 <img src="./assets/emergency.webp" alt="emergency consultation" class="card__image">
                 <h3 class="card__title">Emergency Medical Consultation</h3>
                 <p class="card__text">Available 24/7 everyday in Santa Teresa Beach, Montezuma Beach, Playa Carmen Beach, Nosara and Monteverde.</p>
             </div>
         
-            <div class="card align-items-center">
+            <div class="card align-items-center" data-aos="fade-up">
                 <img src="./assets/consultation.webp" alt="medical consultation" class="card__image">
                 <h3 class="card__title">Medical Consultation</h3>
                 <p class="card__text">Non-Emergency Medical consultations and other services for every day need. From 8 am to 5 pm everyday.</p>
             </div>
         
-            <div class="card align-items-center">
+            <div class="card align-items-center" data-aos="fade-up" data-aos-delay="300">
                 <img src="./assets/stitches.webp" alt="stitching and wound cleaning" class="card__image">
                 <h3 class="card__title">Stitches, wound cleaning and care</h3>
                 <p class="card__text">Service available 24/7 for emergency and Non-Emergency cases</p>
@@ -161,15 +170,15 @@
 
     <footer class="footer__container">
         <a href="https://lifeguardcostarica.com/home"><img src="./assets/logowhite.svg" alt="Logo" class="footer__logo mt-3"></a>
-        <p class="footer__disclaimer mt-4 mb-2">Copyright © 2023 Lifeguard Costa Rica S.A. - All Rights Reserved.</p>
+        <p class="footer__disclaimer mt-4 mb-2">Copyright © 2024 Lifeguard Costa Rica S.A. - All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
-
     <script>
-
+        AOS.init();
         let prevScrollpos = window.pageYOffset;
 
         window.onscroll = function() {
@@ -181,5 +190,18 @@
         }
         prevScrollpos = currentScrollPos;
         }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const element = document.querySelector('.contactus__button');
+
+    element.addEventListener('mouseenter', function() {
+        element.classList.add('hover-pulsate');
+    });
+
+    element.addEventListener('mouseleave', function() {
+        element.classList.remove('hover-pulsate');
+        element.classList.remove('animate__fadeInUp');
+    });
+});
     </script>   
 </html>
