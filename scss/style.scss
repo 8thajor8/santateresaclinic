@@ -463,6 +463,25 @@ body{
     }
 }
 
+.whatsapp__round {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+    
+    img {
+        width: 80px; /* Adjust size as needed */
+        height: auto;
+        border-radius: 30%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
 .footer__container {
     background-color: #4e87b7; /* Blue background color */
     background: linear-gradient(to bottom, 
@@ -499,6 +518,14 @@ body{
         }
         p{
             font-size: 1rem;
+        }
+    }
+    .whatsapp__round {
+        bottom: 20px;
+        right: 40px;
+        img {
+            width: 70px; /* Adjust size as needed */
+            
         }
     }
     .footer__container {
