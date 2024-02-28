@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "AmsiPro-UltraItalic";
+  src: url("../fonts/AmsiPro-UltraItalic.ttf") format("woff2"), url("../fonts/AmsiPro-UltraItalic.ttf") format("woff"); /* Older Browsers */
+  /* Add additional font formats as needed */
+}
+@font-face {
+  font-family: "AmsiPro-Regular";
+  src: url("../fonts/AmsiPro-Regular.ttf") format("woff2"), url("../fonts/AmsiPro-Regular.ttf") format("woff"); /* Older Browsers */
+  /* Add additional font formats as needed */
+}
 body {
-  font-family: "Cabin";
+  font-family: "AmsiPro-Regular";
   background-color: black;
 }
 
@@ -43,11 +53,13 @@ body {
 }
 .navbar li a {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
+  color: rgb(51, 82, 150);
   transition: transform 0.3s ease;
 }
 .navbar li a:hover {
   transform: scale(1.1);
+  color: rgb(239, 62, 66);
 }
 .navbar .collapse.navbar-collapse {
   justify-content: center;
@@ -61,17 +73,17 @@ body {
 }
 
 .call__button {
-  background-color: #2E3192;
+  background-color: rgb(51, 82, 150);
   border-radius: 15px;
   color: white;
-  font-weight: 100;
+  font-weight: bold;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
 }
 .call__button i {
   margin-right: 10px;
 }
 .call__button:hover {
-  background-color: #1C75BC;
+  background-color: rgb(239, 62, 66);
 }
 
 @media (min-width: 992px) {
@@ -83,8 +95,17 @@ body {
     order: 3; /* Move the call button to the right */
   }
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
 .banner {
-  background: linear-gradient(to bottom, white 0%, white 30%, rgb(188, 188, 189));
   height: 100vh;
   min-height: 500px;
   background-color: #ffffff;
@@ -92,65 +113,76 @@ body {
   position: relative;
   z-index: 0;
 }
+.banner .parallax__container {
+  height: 150%; /* Adjusted height */
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-image: url("../assets/evacuation.jpeg");
+  background-color: transparent;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.banner .ripple-background {
+  position: absolute;
+  z-index: 2;
+}
 .banner .circle {
   position: absolute;
   border-radius: 50%;
-  background: #2E3192;
+  background: rgb(51, 82, 150);
   box-shadow: 0px 0px 10px 0px #000000;
 }
 .banner .small {
   width: 400px;
   height: 400px;
-  left: -100px;
-  bottom: -200px;
+  left: -150px;
+  bottom: -950px;
 }
 .banner .medium {
   width: 600px;
   height: 600px;
-  left: -200px;
-  bottom: -300px;
+  left: -250px;
+  bottom: -1050px;
 }
 .banner .large {
   width: 800px;
   height: 800px;
-  left: -300px;
-  bottom: -400px;
+  left: -350px;
+  bottom: -1150px;
 }
 .banner .xlarge {
   width: 1000px;
   height: 1000px;
-  left: -400px;
-  bottom: -500px;
+  left: -450px;
+  bottom: -1250px;
 }
 .banner .xxlarge {
   width: 1200px;
   height: 1200px;
-  left: -500px;
-  bottom: -600px;
-}
-.banner .right__circle {
-  width: 75%;
-  height: 190%;
-  bottom: -400px;
-  right: -800px;
+  left: -550px;
+  bottom: -1350px;
 }
 .banner .shade1 {
   opacity: 0.1;
 }
 .banner .shade2 {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .banner .shade3 {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 .banner .shade4 {
-  opacity: 0.8;
+  opacity: 0.4;
 }
 .banner .shade5 {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 .banner .texto__banner {
-  color: #2E3192;
+  color: rgb(51, 82, 150);
   position: relative;
   z-index: 2;
   max-width: 37%;
@@ -165,20 +197,21 @@ body {
   animation-delay: 0.7s;
 }
 .banner .texto__banner h1 {
-  font-family: "Archivo Black";
+  font-family: "AmsiPro-UltraItalic";
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .banner .texto__banner .parrafo__banner {
   font-size: 1.6rem;
   max-width: 80%;
-  color: black;
+  font-weight: bold;
+  color: white;
 }
 .banner .texto__banner .contactus__button {
-  background-color: #2E3192;
+  background-color: rgb(51, 82, 150);
   border-radius: 20px;
   color: white;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1.2rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
 }
@@ -186,7 +219,7 @@ body {
   margin-right: 10px;
 }
 .banner .texto__banner .contactus__button:hover {
-  background-color: #1C75BC;
+  background-color: rgb(239, 62, 66);
 }
 
 @media (max-width: 992px) {
@@ -207,32 +240,32 @@ body {
   .banner .small {
     width: 400px;
     height: 400px;
-    left: -100px;
-    bottom: -500px;
+    left: -300px;
+    bottom: -1000px;
   }
   .banner .medium {
     width: 600px;
     height: 600px;
-    left: -200px;
-    bottom: -600px;
+    left: -400px;
+    bottom: -1100px;
   }
   .banner .large {
     width: 800px;
     height: 800px;
-    left: -300px;
-    bottom: -700px;
+    left: -500px;
+    bottom: -1200px;
   }
   .banner .xlarge {
     width: 1000px;
     height: 1000px;
-    left: -400px;
-    bottom: -800px;
+    left: -600px;
+    bottom: -1300px;
   }
   .banner .xxlarge {
     width: 1200px;
     height: 1200px;
-    left: -500px;
-    bottom: -900px;
+    left: -700px;
+    bottom: -1400px;
   }
 }
 .location__container {
@@ -242,21 +275,27 @@ body {
 
 .location__info {
   width: 30%;
-  padding: 50px;
-  background-color: #2E3192;
+  background-color: rgb(51, 82, 150);
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.location__info h2 {
+.location__info .background__design {
+  height: 70px;
+  background-image: url(../assets/diseno.svg);
+}
+.location__info .location__content {
+  padding: 30px 50px;
+}
+.location__info .location__content h2 {
   font-size: 1.5em;
-  font-family: "Archivo Black";
+  font-family: "AmsiPro-UltraItalic";
   margin-bottom: 30px;
 }
-.location__info p {
+.location__info .location__content p {
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
-.location__info p a {
+.location__info .location__content p a {
   color: white;
   font-weight: 600;
 }
@@ -266,8 +305,7 @@ body {
   border-radius: 30px;
   color: white;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
-  font-family: "Archivo Black";
-  font-weight: 800;
+  font-family: "AmsiPro-UltraItalic";
   font-size: 1.2rem;
 }
 .whatsapp__button:hover {
@@ -295,7 +333,6 @@ body {
     width: 100%;
     text-align: center;
     order: 2;
-    padding: 20px;
   }
 }
 .services__container {
@@ -307,8 +344,8 @@ body {
 
 .services__title {
   font-size: 2.3rem;
-  font-family: "Archivo Black";
-  color: #2E3192;
+  font-family: "AmsiPro-UltraItalic";
+  color: rgb(51, 82, 150);
   text-transform: uppercase;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -349,10 +386,11 @@ body {
 .card__title {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .card__text {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media (max-width: 992px) {
@@ -375,8 +413,8 @@ body {
 }
 
 .contact__tittle__container {
-  color: #2E3192;
-  font-family: "Archivo Black";
+  color: rgb(51, 82, 150);
+  font-family: "AmsiPro-UltraItalic";
   font-size: 2.3rem;
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -385,7 +423,7 @@ body {
 .contact__divider {
   width: 30%;
   height: 4px;
-  background-color: #2E3192; /* Black color for the divider */
+  background-color: rgb(51, 82, 150); /* Black color for the divider */
   display: inline-block;
 }
 
@@ -424,7 +462,7 @@ body {
 
 .footer__container {
   background-color: #4e87b7; /* Blue background color */
-  background: linear-gradient(to bottom, #4e87b7 0%, #2E3192);
+  background: linear-gradient(to bottom, #4e87b7 0%, rgb(51, 82, 150));
   color: white;
   text-align: center;
   padding: 20px 0;
